@@ -28,6 +28,9 @@ jobs:
         with:
           otp-version: ${{ matrix.otp }}
 
+      - name: Install and configure Zotonic
+        run: git clone https://github.com/zotonic/zotonic.git $ZOTONIC_DIR --depth 1 --branch $ZOTONIC_VERSION
+
       - name: Compile
         working-directory: ${{ env.ZOTONIC_DIR }}
         run: make
