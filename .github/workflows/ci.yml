@@ -12,8 +12,8 @@ jobs:
 
     strategy:
       matrix:
-        otp: ["26"]
-        os: [ubuntu-latest]
+        otp: [24.2, 25, 26]
+        os: [ubuntu-22.04]
 
     env:
       ZOTONIC_DIR: /tmp/zotonic
